@@ -27,6 +27,23 @@ visual_simulator_docker/isaac-sim_assets/
 # Generated simulation data
 visual_simulator_docker/CodeInsectInspired/forest/
 visual_simulator_docker/CodeInsectInspired/cars/
+visual_simulator_docker/CodeInsectInspired/windows_blender*/
+visual_simulator_docker/CodeInsectInspired/kenney_forest_video/
+visual_simulator_docker/CodeInsectInspired/kenney_forest_video.log
+visual_simulator_docker/CodeInsectInspired/*.log
+visual_simulator_docker/CodeInsectInspired/kenney_forest_assets/kenney_nature-kit.zip
+visual_simulator_docker/CodeInsectInspired/kenney_forest_assets/nature-kit/**
+!visual_simulator_docker/CodeInsectInspired/kenney_forest_assets/nature-kit/
+!visual_simulator_docker/CodeInsectInspired/kenney_forest_assets/nature-kit/License.txt
+!visual_simulator_docker/CodeInsectInspired/kenney_forest_assets/nature-kit/Models/
+!visual_simulator_docker/CodeInsectInspired/kenney_forest_assets/nature-kit/Models/DAE format/
+!visual_simulator_docker/CodeInsectInspired/kenney_forest_assets/nature-kit/Models/DAE format/flower_yellowB.dae
+!visual_simulator_docker/CodeInsectInspired/kenney_forest_assets/nature-kit/Models/DAE format/plant_bushLarge.dae
+!visual_simulator_docker/CodeInsectInspired/kenney_forest_assets/nature-kit/Models/DAE format/rock_largeB.dae
+!visual_simulator_docker/CodeInsectInspired/kenney_forest_assets/nature-kit/Models/DAE format/tree_default.dae
+!visual_simulator_docker/CodeInsectInspired/kenney_forest_assets/nature-kit/Models/DAE format/tree_oak.dae
+!visual_simulator_docker/CodeInsectInspired/kenney_forest_assets/nature-kit/Models/DAE format/tree_pineRoundB.dae
+!visual_simulator_docker/CodeInsectInspired/kenney_forest_assets/nature-kit/Models/DAE format/tree_pineTallA.dae
 
 # Core dumps
 core.*

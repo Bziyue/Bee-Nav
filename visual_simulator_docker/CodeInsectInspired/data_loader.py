@@ -94,8 +94,8 @@ class CustomDataset(Dataset):
 
         return image, label
 
-def make_loader(dataset, shuffle, batch_size):
-    return DataLoader(dataset=dataset, batch_size=batch_size, shuffle=shuffle, num_workers=4)
+def make_loader(dataset, shuffle, batch_size, num_workers=4):
+    return DataLoader(dataset=dataset, batch_size=batch_size, shuffle=shuffle, num_workers=num_workers)
 
 def get_data_loader(data_folder, image_folder, csv_filename):
     filenames, target_x, target_y, position_map, rotation_map, target_map, noisy_position_map, noisy_rotation_map, noisy_target_map =  \
@@ -274,8 +274,9 @@ def get_data_loaders(config, load_indices = False):
     val_dataset = torch.utils.data.Subset(full_dataset, val_indices)
     test_dataset = torch.utils.data.Subset(full_dataset, test_indices)
 
-    train_loader = make_loader(train_dataset, shuffle=True, batch_size=config["batch_size"])
-    val_loader = make_loader(val_dataset, shuffle=False, batch_size=config["batch_size_val"])
-    test_loader = make_loader(test_dataset, shuffle=False, batch_size=config["batch_size_eval"])
+    num_workers = int(config.get("num_workers", 4))
+    train_loader = make_loader(train_dataset, shuffle=True, batch_size=config["batch_size"], num_workers=num_workers)
+    val_loader = make_loader(val_dataset, shuffle=False, batch_size=config["batch_size_val"], num_workers=num_workers)
+    test_loader = make_loader(test_dataset, shuffle=False, batch_size=config["batch_size_eval"], num_workers=num_workers)
     
     return train_loader, val_loader, test_loader, position_map, rotation_map, noisy_position_map, target_map, train_indices, val_indices, test_indices
